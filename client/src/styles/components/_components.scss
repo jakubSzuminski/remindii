@@ -1,0 +1,237 @@
+h1 { font-size: 5.3rem; }
+h2 { font-size: 5.3rem; }
+h3 { font-size: 4.3rem; }
+h4 { font-size: 4rem; } 
+
+.small { font-size: 1.6rem; }
+.normal { font-size: 1.8rem; }
+.big { font-size: 2rem; }
+.big-2 { font-size: 3.4rem; }
+
+.lh-sm { line-height: 1; }
+.lh-md { line-height: 1.4; }
+.lh-md-2 { line-height: 1.6; }
+.lh-hg { line-height: 1.8; }
+
+.bold { font-weight: 700; }
+.extrabold { font-weight: 900; }
+.underline { text-decoration: underline; text-underline-offset: 0.35em; }
+
+.color-primary { color: $primary; }
+.color-primary-dark-1 { color: $primary-dark-1; }
+.color-primary-dark-2 { color: $primary-dark-2; }
+.color-gray { color: $gray; }
+.color-gray-light { color: $gray-light; }
+.color-red { color: $red; }
+
+.center { text-align: center; }
+
+.mb-05 { margin-bottom: 0.5rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-15 { margin-bottom: 1.5rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+.mb-36 { margin-bottom: 3.6rem; }
+.mb-4 { margin-bottom: 4rem; }
+.mb-5 { margin-bottom: 5rem; }
+.mb-6 { margin-bottom: 6rem; }
+.mb-7 { margin-bottom: 7rem; }
+
+.flex { display: flex; }
+.flex-center { justify-content: center; align-items: center; }
+.flex-column { flex-direction: column; }
+.space-between { justify-content: space-between; }
+.gap-05 { gap: 0.5rem; }
+.gap-1 { gap: 1rem; }
+.gap-15 { gap: 1.5rem; }
+.gap-2 { gap: 2rem; }
+.gap-8 { gap: 8rem; }
+
+.grid { display: grid; }
+
+.logo {
+    font-family: Pacifico, sans-serif;
+    user-select: none;
+    font-size: 3.1rem;
+}
+
+.container-wide {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.container {
+    width: 120rem;
+    margin: 0 auto;
+}
+
+.container-narrow {
+    width: 110rem;
+    margin: 0 auto;
+}
+
+.container-super-narrow {
+    width: 50rem;
+    margin: 0 auto;
+}
+
+.div-center {
+    display: flex;
+    justify-content: center;
+}
+
+.pointer-on-hover:hover { cursor: pointer; }
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;  
+
+    font-size: inherit;
+    font-family: inherit;  
+    color: $black;
+
+    &:hover {
+        color: $primary;
+        cursor: pointer;
+    }
+}
+
+button.no-outline {
+    border: none !important;
+    outline: none;
+}
+
+.button {
+    &:link, &:visited {
+        text-decoration: underline;
+        color: $black;
+        transition: all 0.2s;
+    }
+
+    &:hover, &:active {
+        color: $primary;
+    }
+
+    &.button-primary:link,
+    &.button-primary:visited {
+        color: $primary;
+    }
+
+    &.button-primary:hover,
+    &.button-primary:active {
+        color: $secondary;
+    }
+}
+
+.button-filled {
+    display: inline-block;
+    &:link,
+    &:visited {
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 6px;
+
+        background-color: $primary;
+        color: $white;
+
+        transition: all 0.5s;
+    }
+
+    &:hover,
+    &:active {
+        background-color: $primary-light-2;
+        color: $primary-dark-2;
+    }
+
+}
+
+.list-text-standard {
+    @include reset-list(column, 1.6rem);
+
+    li { 
+        justify-content: flex-start;
+    }
+}
+
+.button-cta {
+    outline: none;
+    background-color: $primary;
+    color: $white;
+   
+    border-radius: 7px;
+    border: 1px solid $primary !important;
+
+    transition: all 0.35s;
+
+    &:hover {
+        border: 1px solid $secondary !important;
+        background-color: white;
+        color: $secondary;
+    }
+}
+
+.special {
+    font-weight: 900;
+
+    span {
+        display: block;
+    }
+
+    span:first-child {
+        font-weight: 700;
+        font-size: 3rem;
+        color: $primary-light-2;    
+    }
+}
+
+@keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 10px solid $gray-light; /* Light grey */
+    border-top: 10px solid $primary; /* Black */
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+}
+.loading-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 87.5em) {
+    .container-wide,
+    .container {
+        max-width: 80%;
+        width: 80%;
+    }
+    .container-narrow {
+        max-width: 80%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 62.5em) {
+    h1, h2 { font-size: 4.6rem; }
+    h3 { font-size: 4rem; }
+    h4 { font-size: 3.5rem; }
+
+    html {
+        font-size: 56%;
+    }
+
+    .container-super-narrow {
+        width: 70%;
+    }
+}
+

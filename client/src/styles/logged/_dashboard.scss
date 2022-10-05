@@ -1,0 +1,157 @@
+#panel {
+    padding-top: 10rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 12rem;
+    row-gap: 6rem;
+
+    h2 {
+        font-size: 4rem;
+    }
+}
+
+#button-div {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.panel-user-message {
+    background-color: $gray-light;
+    display: block;
+    max-width: 100%;
+
+    line-height: 1.1;
+    padding: 2rem 3rem;
+    border-radius: 35px 35px 35px 5px;
+}
+
+#panel-subscription-info {
+    button.button-cta {
+        padding: 1rem 1.2rem;
+    }
+}
+
+.subscription-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    object {
+        margin-left: 0.5rem;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+#panel-log {
+    div {
+        padding: 2rem 3rem;
+        border-radius: 10px;
+        background-color: $gray-light;
+    }
+    ul {
+        @include reset-list(column, 2rem);
+        user-select: none;
+    }
+}
+
+#log-page {
+    padding-top: 10rem;
+}
+.log-list {
+    @include reset-list(column, 1rem);
+}
+
+#panel-message {
+    textarea {
+        @include set-font(normal);
+        font-family: inherit;
+        color: $primary-dark-2;
+        letter-spacing: 0.2px;
+        line-height: 1.4;
+
+        padding: 1rem 2rem;
+        outline: none;
+        border: 1px solid $primary-dark-1;
+        border-radius: 5px;
+
+        box-shadow: 0px 0px 15px 1px rgba(57, 72, 255, 0.1);
+
+        width: 100%;
+        min-height: 15rem;
+        resize: vertical;
+    }
+}
+
+.message-form-buttons {
+    display: flex;
+    gap: 1.6rem;
+
+    button {
+        padding: 1rem 2rem;
+        border-radius: 10px;
+
+        font-weight: bold;
+    }
+    #message-save {
+        background-color: $primary;
+        color: $white;
+        transition: all 0.25s;
+        &:hover {
+            background-color: transparent;
+            color: $black;
+        }
+    }
+    #message-cancel {
+        transition: all 0.25s;
+        &:hover {
+            background-color: $red;
+            color: $white;
+        }
+    }
+}
+.message-form-sidenote {
+    p {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    ul {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        list-style-position: inside;
+    }
+}
+
+.message-error {
+    @include set-font(small);
+    color: $red;
+    margin-bottom: 1rem;
+}
+
+.Toastify__toast-container {
+    font-family: inherit;
+
+    .Toastify__toast-body {
+        color: $gray;
+        font-family: inherit;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 78.5em) {
+    #panel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 50em) {
+    #panel {
+        grid-template-columns: 1fr;
+    }
+
+    #panel-message {
+        textarea { width: 80%; }
+    }
+}

@@ -1,0 +1,101 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    padding: 2.1rem 0;
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        .active {
+            color: $primary;
+            &:hover {
+                color: $secondary;
+            }
+        }
+
+        .nav-cta {
+            color: $primary;
+            font-weight: 600;
+
+            transition: all 0.3s;
+
+            &:hover,
+            &:active {
+                color: $secondary;
+            }
+        }
+    }
+}
+
+#mobile-nav {
+    position: relative;
+    display: none;
+    ion-icon {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+}
+#mobile-nav-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+
+    right: 0;
+    top: 0;
+    
+    background: rgb(88,131,243);
+    background: linear-gradient(16deg, rgba(88,131,243,1) 0%, rgba(171,193,249,1) 100%);
+
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    ion-icon {
+        margin-top: 10rem;
+        text-align: center;
+        justify-content: center;
+    }
+}
+#mobile-nav-overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    li a:link,
+    li a:visited {
+        color: $black;
+    }
+
+    font-size: 2.6rem;
+}
+.mobile-nav-cta {
+    color: $primary-dark-1;
+    transition: all 0.25s;
+    &:hover {
+        color: $white;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    #main-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: block;
+    }        
+}

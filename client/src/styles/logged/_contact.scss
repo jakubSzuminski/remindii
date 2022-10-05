@@ -1,0 +1,22 @@
+#contact-page {
+    padding-top: 10rem;
+    
+    ul {
+        @include reset-list(column, .5rem);
+    }
+
+    li {
+        a:link,
+        a:visited {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            ion-icon {
+                width: 2rem;
+                height: 2rem;
+                color: $primary;
+            }
+        }
+    }
+}

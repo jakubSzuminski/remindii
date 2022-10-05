@@ -1,0 +1,15 @@
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+
+export const GET_DATA = 'GET_DATA';
+export const GET_DATA_FAILED = 'GET_DATA_FAILED';
+
+export const GET_USER_LOG = 'GET_USER_LOG';
+
+export const UPDATE_USER_MESSAGE = 'UPDATE_USER_MESSAGE';
+
+export const START_LOADING = 'START_LOADING';
+export const END_LOADING = 'END_LOADING';
+
+export const MESSAGE_START_LOADING = 'MESSAGE_START_LOADING';
+export const MESSAGE_END_LOADING = 'MESSAGE_END_LOADING';

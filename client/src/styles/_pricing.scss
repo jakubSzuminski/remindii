@@ -1,0 +1,86 @@
+#pricing-page {
+    padding-top: 10rem;
+}
+
+.pricing-plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.pricing-plan {
+    background-color: $gray-light;
+
+    h2 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.6rem;
+    }
+
+    .price {
+        p { font-size: 3rem; font-weight: 700; }
+        span { 
+            color: $gray;
+            letter-spacing: 3px;
+            font-size: 1.6rem;
+            
+            display: block;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .plan-limit { color: $gray; }
+
+    button {
+        padding: 1rem 2rem;
+        margin-top: 3rem;
+
+        border-radius: 15px;
+        color: $white;
+        background-color: $primary-light-1;
+
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: $gray;
+        }
+    }
+
+
+    padding: 3rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+
+    box-shadow: 0px 0px 8px -2px rgba(12, 12, 78, .12);
+
+    &.pricing-plan-special {
+        h2 { color: $primary-dark-2; }
+
+        .price {
+            p { color: $primary-dark-2; }
+            span { color: $primary-dark-1; }
+        }
+
+        .plan-limit { color: $primary-dark-1 !important; }
+
+        background-color: $primary-light-2;
+        box-shadow: 0px 0px 8px -2px rgba(12, 12, 78, .4);
+
+        button {
+            background-color: $primary;
+            &:hover {
+                color: $black;
+                background-color: $primary-light-2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 50em) {
+    .pricing-plans {
+        grid-template-columns: 1fr;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 3.6rem;
+    }
+}

@@ -1,0 +1,28 @@
+#contact {
+    padding-top: 10rem;
+}
+
+ul.contact-options {
+    @include reset-list(column, .5rem);
+    
+    li {
+        a:link,
+        a:visited {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            
+            color: $gray;
+            
+            ion-icon {
+                width: 2rem;
+                height: 2rem;
+                color: $primary;
+            }
+        }
+        a:hover,
+        a:active {
+            color: $primary;
+        }
+    }
+}
